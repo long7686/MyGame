@@ -2,18 +2,21 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
+        bodyTank: cc.Node,
+        barrelTank: cc.Node,
+        directionNode: cc.Node,
+        rb: cc.RigidBody,
         _tween: null,
         _action: null,
-        bodyTurn: null,
-        bodyMove: null,
-        rotationBodyValue: 10,
+        rotationBodyValue: 20,
         moveBodyValue: 2000,
     },
 
     onLoad: function () {
         // add key down and key up event
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
-        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
+        this.node.parent.on("mousemove", this.lookAtMouse, this)
+        // cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
         this._tween = cc.tween(this.node)
         this._action= cc.rotateBy();
         this.bodyTurn = this.node.rotation;
@@ -22,7 +25,7 @@ cc.Class({
 
 
     start () {
-        cc.log(this.node.angle)
+        
     },
 
     update (dt) {
@@ -31,38 +34,39 @@ cc.Class({
     onKeyDown: function (event) {
         switch(event.keyCode) {
             case cc.macro.KEY.a:
-                let rto = cc.rotateBy(0.2,-20);
-                this.node.runAction(rto);
+                let rto = cc.rotateBy(0.2, -this.rotationBodyValue);
+                this.bodyTank.runAction(rto);
                 break;
 
             case cc.macro.KEY.d:
-                let rto2 = cc.rotateBy(0.2,20);
-                this.node.runAction(rto2);
+                rto = cc.rotateBy(0.2, this.rotationBodyValue);
+                this.bodyTank.runAction(rto);
                 break;
-
+        }
+        switch(event.keyCode) {
             case cc.macro.KEY.w:
-                let rto3 = cc.moveBy(0.2,30);
-                this.node.runAction(rto3);
+                this.node.y += 10
                 break;
 
             case cc.macro.KEY.s:
-                let rto4 = cc.moveBy(0.2,-30);
-                this.node.runAction(rto4);
+                this.node.y -= 10
                 break;
         }
     },
 
-    onKeyUp: function (event) {
-        // switch(event.keyCode) {
-        //     case cc.macro.KEY.a:
-        //         let rto2 = cc.rotateto(0,);
-        //         this.node.runAction(rto2);
-        //         break;
-        //     case cc.macro.KEY.d:
-        //         let rto = cc.rotateBy(0,0);
-        //         this.node.runAction(rto);
-        //         break;
-               
-        // }
-    }
+    lookAtMouse(event){
+        var tankPosition = cc.v2(this.barrelTank.x, this.barrelTank.y)
+        var mousePosition = event.getLocation();
+
+        mousePosition = this.node.parent.convertToNodeSpaceAR(mousePosition) // Covert to mouse location became a Node
+        var angle = mousePosition.signAngle(tankPosition)
+        angle = cc.misc.radiansToDegrees(mousePosition.signAngle(tankPosition))
+        angle *= -1 
+        this.barrelTank.angle = angle;
+    },
+
+    moveToward(){
+        var towardNode = cc.v2(this.directionNode.x, this.directionNode.y)
+        // var tankPosition = 
+    }, 
 });
