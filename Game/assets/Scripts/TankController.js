@@ -34,7 +34,7 @@ cc.Class({
     onKeyDown: function (event) {
         switch(event.keyCode) {
             case cc.macro.KEY.a:
-                let rto = cc.rotateBy(0.2, -this.rotationBodyValue);
+                let rto = cc.rotateBy(0.2, -this.rotationBodyValue);  
                 this.bodyTank.runAction(rto);
                 break;
 
