@@ -1,72 +1,74 @@
+const Emitter = require("EventsListener")
 cc.Class({
     extends: cc.Component,
 
     properties: {
-        bodyTank: cc.Node,
+        // bodyTank: cc.Node,
         barrelTank: cc.Node,
         directionNode: cc.Node,
         rb: cc.RigidBody,
-        _tween: null,
-        _action: null,
-        rotationBodyValue: 20,
-        moveBodyValue: 2000,
+        spawnBullet: cc.Node,
+        _direc: cc.v2,
     },
 
     onLoad: function () {
         // add key down and key up event
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
-        this.node.parent.on("mousemove", this.lookAtMouse, this)
-        // cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
-        this._tween = cc.tween(this.node)
-        this._action= cc.rotateBy();
-        this.bodyTurn = this.node.rotation;
-        this.bodyMove = this.node.position;
+        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
     },
 
 
     start () {
-        
+    },
+
+    getDirection(){
+        this._direc = this.node.convertToWorldSpaceAR(this.directionNode.position);
+        this._direc = this.node.parent.convertToNodeSpaceAR(this._direc);
+        this._direc =new cc.v2(this._direc.x - this.node.position.x, this._direc.y- this.node.position.y)
     },
 
     update (dt) {
+        this.getDirection()
     },
 
     onKeyDown: function (event) {
+        this.getDirection()
         switch(event.keyCode) {
             case cc.macro.KEY.a:
-                let rto = cc.rotateBy(0.2, -this.rotationBodyValue);  
-                this.bodyTank.runAction(rto);
+                this.node.angle += 10
                 break;
 
             case cc.macro.KEY.d:
-                rto = cc.rotateBy(0.2, this.rotationBodyValue);
-                this.bodyTank.runAction(rto);
+                this.node.angle -= 10
                 break;
-        }
-        switch(event.keyCode) {
             case cc.macro.KEY.w:
-                this.node.y += 10
+                this.rb.linearVelocity = new cc.v2(this._direc.x, this._direc.y)
                 break;
 
             case cc.macro.KEY.s:
-                this.node.y -= 10
+                this.rb.linearVelocity = new cc.v2(-this._direc.x , -this._direc.y)
                 break;
+            case cc.macro.KEY.left:
+                this.barrelTank.angle += 10
+                break;
+
+            case cc.macro.KEY.right:
+                this.barrelTank.angle-= 10
+                break;
+        }
+        switch(event.keyCode) {
+            case cc.macro.KEY.space:
+                Emitter.instance.emit("SpawnBullet", this.spawnBullet, this._direc)
+            break;
         }
     },
 
-    lookAtMouse(event){
-        var tankPosition = cc.v2(this.barrelTank.x, this.barrelTank.y)
-        var mousePosition = event.getLocation();
-
-        mousePosition = this.node.parent.convertToNodeSpaceAR(mousePosition) // Covert to mouse location became a Node
-        var angle = mousePosition.signAngle(tankPosition)
-        angle = cc.misc.radiansToDegrees(mousePosition.signAngle(tankPosition))
-        angle *= -1 
-        this.barrelTank.angle = angle;
+    onKeyUp(event){
+        switch(event.keyCode) {
+            case cc.macro.KEY.w:
+            case cc.macro.KEY.s:
+                this.rb.linearVelocity = new cc.v2(0, 0)
+                break;
+        }
     },
-
-    moveToward(){
-        var towardNode = cc.v2(this.directionNode.x, this.directionNode.y)
-        // var tankPosition = 
-    }, 
 });
