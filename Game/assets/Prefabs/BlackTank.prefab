@@ -25,7 +25,7 @@
       }
     ],
     "_active": true,
-    "_level": 2,
+    "_level": 1,
     "_components": [
       {
         "__id__": 10
@@ -208,7 +208,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "bae16bbe-c090-4fa7-bb4e-246cdb93f89f"
     },
     "fileId": "47MhJNVPJHuZqlWnaJevBe",
     "sync": false
@@ -251,7 +251,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "bae16bbe-c090-4fa7-bb4e-246cdb93f89f"
     },
     "fileId": "cf+5QR4bhNb6b3XDWQOGUz",
     "sync": false
@@ -354,7 +354,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "bae16bbe-c090-4fa7-bb4e-246cdb93f89f"
     },
     "fileId": "64ab+KdqtN0LiybXQFDIE1",
     "sync": false
@@ -367,22 +367,15 @@
       "__id__": 1
     },
     "_enabled": true,
-    "bodyTank": {
-      "__id__": 2
-    },
-    "barrelTank": {
-      "__id__": 7
-    },
     "directionNode": {
       "__id__": 3
     },
     "rb": {
       "__id__": 11
     },
-    "_tween": null,
-    "_action": null,
-    "rotationBodyValue": 20,
-    "moveBodyValue": 100,
+    "spawnBullet": null,
+    "BulletPrefabs": null,
+    "speedBullet": 200,
     "_id": ""
   },
   {
@@ -442,7 +435,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "bae16bbe-c090-4fa7-bb4e-246cdb93f89f"
     },
     "fileId": "8dc3h2kWpCE7WpWRE7Dipa",
     "sync": false
