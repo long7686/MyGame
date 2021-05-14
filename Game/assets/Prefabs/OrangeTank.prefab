@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "BlackTank",
+    "_name": "OrangeTank",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -63,8 +63,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": -318.104,
-      "y": 124.33,
+      "x": 61.669,
+      "y": 196.356,
       "z": 0
     },
     "_scale": {
@@ -161,7 +161,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "27c7fe84-e264-4873-ab82-2c5aba997430"
+      "__uuid__": "f64afd81-25c1-4476-ba91-5dcaf7614dfa"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -183,9 +183,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "bae16bbe-c090-4fa7-bb4e-246cdb93f89f"
+      "__uuid__": "d7c2c38a-447d-427c-85e7-9d210ac60c50"
     },
-    "fileId": "cf+5QR4bhNb6b3XDWQOGUz",
+    "fileId": "9aag5CbN5MGJ9OeiHI1HIX",
     "sync": false
   },
   {
@@ -264,7 +264,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "99aacb1a-cb37-426b-bac8-0ca9994cb1a5"
+      "__uuid__": "9bd676ea-4c5d-430e-88a8-6769a81d9902"
     },
     "_type": 0,
     "_sizeMode": 0,
@@ -286,9 +286,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "bae16bbe-c090-4fa7-bb4e-246cdb93f89f"
+      "__uuid__": "d7c2c38a-447d-427c-85e7-9d210ac60c50"
     },
-    "fileId": "64ab+KdqtN0LiybXQFDIE1",
+    "fileId": "0aFPVVFqZEp6Fhxb3fGnV2",
     "sync": false
   },
   {
@@ -420,9 +420,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "bae16bbe-c090-4fa7-bb4e-246cdb93f89f"
+      "__uuid__": "d7c2c38a-447d-427c-85e7-9d210ac60c50"
     },
-    "fileId": "2fsjvTz0lA2oclLpwLALHV",
+    "fileId": "e0SSkFD/JGH6Wt+N34bauK",
     "sync": false
   },
   {
@@ -484,7 +484,6 @@
       "__id__": 1
     },
     "_enabled": true,
-    "checkPlayerZone": null,
     "_id": ""
   },
   {
@@ -493,9 +492,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "bae16bbe-c090-4fa7-bb4e-246cdb93f89f"
+      "__uuid__": "d7c2c38a-447d-427c-85e7-9d210ac60c50"
     },
-    "fileId": "8dc3h2kWpCE7WpWRE7Dipa",
+    "fileId": "69RsIDKAxDHJ4e+28DeEwr",
     "sync": false
   }
 ]

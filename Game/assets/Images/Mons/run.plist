@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>Run (32x32)_01.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{53,29},{24,28}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{24,28}}</string>
+				<key>sourceSize</key>
+				<string>{24,28}</string>
+			</dict>
+
+			<key>Run (32x32)_02.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{53,0},{24,28}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{24,28}}</string>
+				<key>sourceSize</key>
+				<string>{24,28}</string>
+			</dict>
+
+			<key>Run (32x32)_04.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{53,29},{24,28}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{24,28}}</string>
+				<key>sourceSize</key>
+				<string>{24,28}</string>
+			</dict>
+
+			<key>Run (32x32)_05.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,29},{26,28}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{26,28}}</string>
+				<key>sourceSize</key>
+				<string>{26,28}</string>
+			</dict>
+
+			<key>Run (32x32)_07.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{27,29},{25,28}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{25,28}}</string>
+				<key>sourceSize</key>
+				<string>{25,28}</string>
+			</dict>
+
+			<key>Run (32x32)_08.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{27,0},{25,28}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{25,28}}</string>
+				<key>sourceSize</key>
+				<string>{25,28}</string>
+			</dict>
+
+			<key>Run (32x32)_10.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{27,29},{25,28}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{25,28}}</string>
+				<key>sourceSize</key>
+				<string>{25,28}</string>
+			</dict>
+
+			<key>Run (32x32)_11.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{26,28}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{26,28}}</string>
+				<key>sourceSize</key>
+				<string>{26,28}</string>
+			</dict>
+
+		</dict>
+
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>size</key>
+			<string>{128,64}</string>
+			<key>textureFileName</key>
+			<string>run.png</string>
+			</dict>
+		</dict>
+</plist>

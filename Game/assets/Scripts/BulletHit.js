@@ -2,26 +2,37 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        collision_manager:  null
+        effectHit: cc.Prefab
     },
 
     // LIFE-CYCLE CALLBACKS:
 
     onLoad () {
-        this.collision_manager = cc.director.getCollisionManager();
-        this.collision_manager.enable = true;
-        this.collision_manager.enabled = true;
     },
 
     start () {
     },
 
-    onCollisionEnter(other, self){
-        this.node.destroy()
-        if(other.tag == 3){
-            other.node.destroy()
-        } 
+    onBeginContact(contact, selfCollider, otherCollider){
+
+        if (otherCollider.tag != 0){
+            // this.effectHitAnyThing(selfCollider.node.position)
+            selfCollider.node.destroy()
+            if(otherCollider.node.group === "Enemies") {
+                otherCollider.node.destroy()
+            }
+        }
     },
+
+    effectHitAnyThing(effectPos){
+        // this.bulletPos = this.node.convertToWorldSpaceAR(this.spawnBullet.position);
+        // this.bulletPos = this.node.parent.convertToNodeSpaceAR(this.bulletPos);
+        // effect.scale = cc.v2(0,0)
+        // cc.tween(effect)
+        //     .to(2,{scale:cc.v2(2,2)})
+        //     .to(2,{scale:cc.v2(0,0)})
+        //     .start()
+    }
 
     // update (dt) {},
 });
