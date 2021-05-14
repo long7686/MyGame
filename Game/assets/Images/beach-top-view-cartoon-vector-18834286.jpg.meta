@@ -1,0 +1,34 @@
+{
+  "ver": "2.3.3",
+  "uuid": "dca29fc3-ab63-49ca-97bd-890508a05fcd",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "platformSettings": {},
+  "subMetas": {
+    "beach-top-view-cartoon-vector-18834286": {
+      "ver": "1.0.4",
+      "uuid": "e902a615-449a-4af0-851d-60cba39f2175",
+      "rawTextureUuid": "dca29fc3-ab63-49ca-97bd-890508a05fcd",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 1000,
+      "height": 1080,
+      "rawWidth": 1000,
+      "rawHeight": 1080,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

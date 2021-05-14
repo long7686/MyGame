@@ -13,15 +13,12 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "GreenTank",
+    "_name": "Man",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
       {
         "__id__": 2
-      },
-      {
-        "__id__": 5
       }
     ],
     "_active": true,
@@ -38,10 +35,13 @@
       },
       {
         "__id__": 10
+      },
+      {
+        "__id__": 11
       }
     ],
     "_prefab": {
-      "__id__": 11
+      "__id__": 12
     },
     "_opacity": 255,
     "_color": {
@@ -53,8 +53,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 63.8461538,
-      "height": 60
+      "width": 50,
+      "height": 50
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -63,8 +63,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 311,
-      "y": -1708.202,
+      "x": 172,
+      "y": 82,
       "z": 0
     },
     "_scale": {
@@ -82,12 +82,12 @@
     "_skewX": 0,
     "_skewY": 0,
     "_is3DNode": false,
-    "groupIndex": 0,
+    "groupIndex": 2,
     "_id": ""
   },
   {
     "__type__": "cc.Node",
-    "_name": "barrelGreen",
+    "_name": "CheckPlayer",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -98,107 +98,14 @@
     "_components": [
       {
         "__id__": 3
-      }
-    ],
-    "_prefab": {
-      "__id__": 4
-    },
-    "_opacity": 255,
-    "_color": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_contentSize": {
-      "__type__": "cc.Size",
-      "width": 18.4615385,
-      "height": 44.6153846
-    },
-    "_anchorPoint": {
-      "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.2
-    },
-    "_position": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_scale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_eulerAngles": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_skewX": 0,
-    "_skewY": 0,
-    "_is3DNode": false,
-    "groupIndex": 0,
-    "_id": ""
-  },
-  {
-    "__type__": "cc.Sprite",
-    "_name": "barrelGreen<Sprite>",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 2
-    },
-    "_enabled": true,
-    "_materials": [
+      },
       {
-        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+        "__id__": 4
+      },
+      {
+        "__id__": 5
       }
     ],
-    "_srcBlendFactor": 770,
-    "_dstBlendFactor": 771,
-    "_spriteFrame": {
-      "__uuid__": "54b91aa0-9cd3-467e-88a8-22ebd778cd33"
-    },
-    "_type": 0,
-    "_sizeMode": 0,
-    "_fillType": 0,
-    "_fillCenter": {
-      "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
-    },
-    "_fillStart": 0,
-    "_fillRange": 0,
-    "_isTrimmedMode": true,
-    "_atlas": null,
-    "_id": ""
-  },
-  {
-    "__type__": "cc.PrefabInfo",
-    "root": {
-      "__id__": 1
-    },
-    "asset": {
-      "__uuid__": "afcd280a-3c79-4a72-b81e-6b0896d7021f"
-    },
-    "fileId": "d4g0R7gMVFb7qE6MGz4k4A",
-    "sync": false
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "SpawnBullet",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 1
-    },
-    "_children": [],
-    "_active": true,
-    "_level": 3,
-    "_components": [],
     "_prefab": {
       "__id__": 6
     },
@@ -223,7 +130,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 63,
+      "y": 0,
       "z": 0
     },
     "_scale": {
@@ -241,7 +148,65 @@
     "_skewX": 0,
     "_skewY": 0,
     "_is3DNode": false,
-    "groupIndex": 0,
+    "groupIndex": 2,
+    "_id": ""
+  },
+  {
+    "__type__": "7dd74aNr6xJILh+xG5ivKim",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 2
+    },
+    "_enabled": true,
+    "_target": null,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.RigidBody",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 2
+    },
+    "_enabled": true,
+    "_type": 2,
+    "_allowSleep": true,
+    "_gravityScale": 1,
+    "_linearDamping": 0,
+    "_angularDamping": 0,
+    "_linearVelocity": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_angularVelocity": 0,
+    "_fixedRotation": false,
+    "enabledContactListener": true,
+    "bullet": false,
+    "awakeOnLoad": true,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.PhysicsCircleCollider",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 2
+    },
+    "_enabled": true,
+    "tag": 0,
+    "_density": 1,
+    "_sensor": true,
+    "_friction": 0.2,
+    "_restitution": 0,
+    "body": null,
+    "_offset": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_radius": 351,
     "_id": ""
   },
   {
@@ -250,14 +215,14 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "afcd280a-3c79-4a72-b81e-6b0896d7021f"
+      "__uuid__": "f009a03e-451d-4769-9485-d47271964c3d"
     },
-    "fileId": "8b9MxgJlJJTZjlH987No13",
+    "fileId": "9eTl4A+vpJGK0ibS6SUm5Y",
     "sync": false
   },
   {
     "__type__": "cc.Sprite",
-    "_name": "GreenTank<Sprite>",
+    "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 1
@@ -271,7 +236,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "aaa29374-84fa-4c1d-964d-dcb115a4577f"
+      "__uuid__": "e6c89bcb-6a8e-4839-ae07-1e775c379679"
     },
     "_type": 0,
     "_sizeMode": 0,
@@ -284,7 +249,44 @@
     "_fillStart": 0,
     "_fillRange": 0,
     "_isTrimmedMode": true,
-    "_atlas": null,
+    "_atlas": {
+      "__uuid__": "a05e2d38-edf4-4d03-830f-31cfd074f5e8"
+    },
+    "_id": ""
+  },
+  {
+    "__type__": "cc.Animation",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "_defaultClip": {
+      "__uuid__": "bc5b82d3-cf89-45cc-96c7-2f3675a0e11d"
+    },
+    "_clips": [
+      {
+        "__uuid__": "bc5b82d3-cf89-45cc-96c7-2f3675a0e11d"
+      },
+      {
+        "__uuid__": "95b4ebb4-4026-4e13-bfb3-b48eff8f2cdb"
+      }
+    ],
+    "playOnLoad": true,
+    "_id": ""
+  },
+  {
+    "__type__": "821920NoDRLro8foLnSCz/0",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "animator": {
+      "__id__": 8
+    },
     "_id": ""
   },
   {
@@ -296,7 +298,7 @@
     },
     "_enabled": true,
     "_type": 2,
-    "_allowSleep": true,
+    "_allowSleep": false,
     "_gravityScale": 1,
     "_linearDamping": 0,
     "_angularDamping": 0,
@@ -320,7 +322,7 @@
       "__id__": 1
     },
     "_enabled": true,
-    "tag": 1,
+    "tag": 3,
     "_density": 1,
     "_sensor": false,
     "_friction": 0.2,
@@ -333,30 +335,9 @@
     },
     "_size": {
       "__type__": "cc.Size",
-      "width": 60.5,
-      "height": 59
+      "width": 36.9,
+      "height": 46.7
     },
-    "_id": ""
-  },
-  {
-    "__type__": "3d8f6EW5eNM1rNw8Kpdsf0W",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "rb": {
-      "__id__": 8
-    },
-    "spawnBullet": {
-      "__id__": 5
-    },
-    "BulletPrefabs": {
-      "__uuid__": "48f0f5b1-feb1-49fb-91b7-19e0be23895b"
-    },
-    "speedBullet": 300,
-    "tankSpeed": 300,
     "_id": ""
   },
   {
@@ -365,9 +346,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "afcd280a-3c79-4a72-b81e-6b0896d7021f"
+      "__uuid__": "f009a03e-451d-4769-9485-d47271964c3d"
     },
-    "fileId": "ec1Yqsa+xBB4f8zaYPVcn2",
+    "fileId": "cfgoYTUddCE7DCqwaY1OAE",
     "sync": false
   }
 ]

@@ -2,7 +2,7 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        effectHit: cc.Prefab
+        // effectHit: cc.Prefab
     },
 
     // LIFE-CYCLE CALLBACKS:

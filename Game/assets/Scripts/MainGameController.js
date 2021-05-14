@@ -26,6 +26,7 @@ cc.Class({
 
         bullet.setPosition(bulletPos)
         bullet.angle = bulletLookAt
+        effect.angle = bulletLookAt
         effect.setPosition(bulletPos)
 
         this.node.parent.addChild(effect)
@@ -36,13 +37,13 @@ cc.Class({
             bullet.destroy();
         },this)
         let sequence = cc.sequence(action, destroyBullet)
+        cc.tween(effect)
+            .to(0.1,{scaleX:0})
+            .call(() => effect.destroy())
+            .start()  
         bullet.runAction(sequence)
 
-        effect.scale = 0
-        cc.tween(effect)
-            .to(0.5,{scale:.5})
-            .to(1,{opacity:0})
-            .call(() => effect.destroy())
-            .start()        
+        // effect.scale = 0
+              
     }
 });
