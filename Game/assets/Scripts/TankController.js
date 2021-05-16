@@ -6,8 +6,22 @@ cc.Class({
         rb: cc.RigidBody,
         spawnBullet: cc.Node,
         BulletPrefabs: cc.Prefab,
-        speedBullet: 100,
-        tankSpeed: 300,
+        speedBullet:{
+            default:200,
+            serializable:false,
+        },
+        tankSpeed: {
+            default:300,
+            serializable:false,
+        },
+        _Ammunition:{
+            default:10,
+            serializable:false,
+        },
+        _playerHealth:{
+            default:100,
+            serializable:false,
+        },
     },
 
     onLoad: function () {
@@ -17,7 +31,7 @@ cc.Class({
     },
 
     start(){
-        this.getBulletDirection();
+        
     },
 
     getBulletDirection(){
@@ -43,8 +57,15 @@ cc.Class({
         
         switch(event.keyCode) {
             case cc.macro.KEY.space:
-                this.getBulletDirection()
-                Emitter.instance.emit("SpawnBullet", this.bulletPos, this._shootDirec, this.BulletPrefabs, this.node.angle)
+                if ( this._Ammunition > 0){
+                    if (this.bulletPos != undefined){
+                        this.getBulletDirection()
+                        this._Ammunition -=1
+                        Emitter.instance.emit("SpawnBullet", this.bulletPos, this._shootDirec, this.BulletPrefabs, this.node.angle)
+                        Emitter.instance.emit("HUDcontroll", this._playerHealth, this._Ammunition)
+                    }   
+                }
+               
             break;
         }
     },
@@ -84,5 +105,65 @@ cc.Class({
         this._shootDirec = new cc.v2(this.speedBullet,0)
         this.rb.linearVelocity = new cc.v2(this.tankSpeed, 0)
        
+    },
+
+    onBeginContact(contact, selfCollider, otherCollider){
+        if (otherCollider.tag === 5){
+            this._Ammunition += 5
+            Emitter.instance.emit("HUDcontroll", this._playerHealth, this._Ammunition)
+            otherCollider.node.destroy()
+        }
+
+        if (otherCollider.tag === 3){
+            this._playerHealth -= 30
+            Emitter.instance.emit("HUDcontroll", this._playerHealth, this._Ammunition)
+            if (this._playerHealth <= 0){
+                this.playerDead()
+            }
+            else{
+                this.playerGetDame()
+            }
+        }
+
+        if (otherCollider.tag === 6){
+            this._playerHealth -= 10
+            Emitter.instance.emit("HUDcontroll", this._playerHealth, this._Ammunition)
+            if (this._playerHealth <= 0){
+                this.playerDead()
+            }
+            else{
+                this.playerGetDame()
+            }
+        }
+
+        if (otherCollider.tag === 10){
+            this._Ammunition = 0
+            Emitter.instance.emit("Win")
+            this.node.active = false;
+        }
+    },
+
+    playerDead(){
+        this.node.active = false
+        this._Ammunition = 0
+        Emitter.instance.emit("Lose")
+    },
+
+    playerGetDame(){
+        if(this._playerHealth > 0){
+            cc.tween(this.node)
+            .to(0.2,{color: new cc.Color(255,0,0,255)})
+            .to(0.2,{color: new cc.Color(255,255,255,255)})
+            .to(0.2,{color: new cc.Color(255,0,0,255)})
+            .to(0.2,{color: new cc.Color(255,255,255,255)})
+            .to(0.2,{color: new cc.Color(255,0,0,255)})
+            .to(0.2,{color: new cc.Color(255,255,255,255)})
+            .start()
+
+        }
+        else if(this._playerHealth <= 0){
+            this.playerDead()
+        }
     }
+
 });

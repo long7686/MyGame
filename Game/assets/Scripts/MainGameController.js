@@ -5,7 +5,7 @@ cc.Class({
     properties: {
        _managerPhysics: null,
        _managerCollsion: null,
-       effectHit: cc.Prefab
+       effectHit: cc.Prefab,
     },
     
     onLoad () {
@@ -16,13 +16,14 @@ cc.Class({
         collision_manager.enabledDebugDraw = true
         physics_manager.enabledDebugDraw = true
         physics_manager.gravity = new cc.v2(0,0)
+
         Emitter.instance = new Emitter()
         Emitter.instance.registerEvent("SpawnBullet", this.Shoot.bind(this))
     },
 
     Shoot(bulletPos, bullerDirec, bulletPre, bulletLookAt){
-        let bullet =cc.instantiate(bulletPre) 
-        let effect =cc.instantiate(this.effectHit) 
+        let bullet = cc.instantiate(bulletPre)  
+        let effect = cc.instantiate(this.effectHit) 
 
         bullet.setPosition(bulletPos)
         bullet.angle = bulletLookAt
@@ -41,9 +42,6 @@ cc.Class({
             .to(0.1,{scaleX:0})
             .call(() => effect.destroy())
             .start()  
-        bullet.runAction(sequence)
-
-        // effect.scale = 0
-              
-    }
+        bullet.runAction(sequence)    
+    },
 });

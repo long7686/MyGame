@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "BlackTank",
+    "_name": "OrangeTank",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -21,27 +21,27 @@
         "__id__": 2
       },
       {
-        "__id__": 5
+        "__id__": 7
       }
     ],
     "_active": true,
     "_level": 1,
     "_components": [
       {
-        "__id__": 10
-      },
-      {
-        "__id__": 11
-      },
-      {
         "__id__": 12
       },
       {
         "__id__": 13
+      },
+      {
+        "__id__": 14
+      },
+      {
+        "__id__": 15
       }
     ],
     "_prefab": {
-      "__id__": 14
+      "__id__": 16
     },
     "_opacity": 255,
     "_color": {
@@ -63,8 +63,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": -318.104,
-      "y": 124.33,
+      "x": -25.499,
+      "y": 1247.333,
       "z": 0
     },
     "_scale": {
@@ -92,16 +92,20 @@
     "_parent": {
       "__id__": 1
     },
-    "_children": [],
-    "_active": true,
-    "_level": 3,
-    "_components": [
+    "_children": [
       {
         "__id__": 3
       }
     ],
+    "_active": true,
+    "_level": 3,
+    "_components": [
+      {
+        "__id__": 5
+      }
+    ],
     "_prefab": {
-      "__id__": 4
+      "__id__": 6
     },
     "_opacity": 255,
     "_color": {
@@ -146,6 +150,73 @@
     "_id": ""
   },
   {
+    "__type__": "cc.Node",
+    "_name": "Bullet Spawn ",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 2
+    },
+    "_children": [],
+    "_active": true,
+    "_level": 4,
+    "_components": [],
+    "_prefab": {
+      "__id__": 4
+    },
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 0,
+      "height": 0
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_position": {
+      "__type__": "cc.Vec3",
+      "x": 2.568,
+      "y": -60.745,
+      "z": 0
+    },
+    "_scale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_is3DNode": false,
+    "groupIndex": 0,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 1
+    },
+    "asset": {
+      "__uuid__": "86bb9cd9-b162-45ad-8716-4e9a840a1e1c"
+    },
+    "fileId": "72mvY2EBNNibrm9KDUWS3r",
+    "sync": false
+  },
+  {
     "__type__": "cc.Sprite",
     "_name": "Barrel<Sprite>",
     "_objFlags": 0,
@@ -183,9 +254,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "3a458332-a476-41af-9c0e-a9cb8c204866"
+      "__uuid__": "86bb9cd9-b162-45ad-8716-4e9a840a1e1c"
     },
-    "fileId": "84qMxkycdBfqQeb9I2NFjl",
+    "fileId": "61DwDK74lLe5d6jtG8arR1",
     "sync": false
   },
   {
@@ -200,17 +271,17 @@
     "_level": 2,
     "_components": [
       {
-        "__id__": 6
-      },
-      {
-        "__id__": 7
-      },
-      {
         "__id__": 8
+      },
+      {
+        "__id__": 9
+      },
+      {
+        "__id__": 10
       }
     ],
     "_prefab": {
-      "__id__": 9
+      "__id__": 11
     },
     "_opacity": 255,
     "_color": {
@@ -259,7 +330,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 5
+      "__id__": 7
     },
     "_enabled": true,
     "_target": null,
@@ -270,7 +341,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 5
+      "__id__": 7
     },
     "_enabled": true,
     "_type": 2,
@@ -295,7 +366,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 5
+      "__id__": 7
     },
     "_enabled": true,
     "tag": 0,
@@ -318,9 +389,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "3a458332-a476-41af-9c0e-a9cb8c204866"
+      "__uuid__": "86bb9cd9-b162-45ad-8716-4e9a840a1e1c"
     },
-    "fileId": "ce7fD9B/tI6ofsQBYOi8jB",
+    "fileId": "77lWxnZPxK3a/KTPslkj3f",
     "sync": false
   },
   {
@@ -363,7 +434,7 @@
       "__id__": 1
     },
     "_enabled": true,
-    "_type": 2,
+    "_type": 0,
     "_allowSleep": true,
     "_gravityScale": 1,
     "_linearDamping": 0,
@@ -414,6 +485,22 @@
       "__id__": 1
     },
     "_enabled": true,
+    "barrel": {
+      "__id__": 2
+    },
+    "_target": null,
+    "_angleD": null,
+    "enemyBullet": {
+      "__uuid__": "99cea024-6ba7-4718-a48f-ca16d453929c"
+    },
+    "bulletSpawnPos": {
+      "__id__": 3
+    },
+    "bulletPos": null,
+    "deadEffect": {
+      "__uuid__": "07bc0e41-f2fc-43aa-90f4-39be8939c2a4"
+    },
+    "_isDead": false,
     "_id": ""
   },
   {
@@ -422,9 +509,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "3a458332-a476-41af-9c0e-a9cb8c204866"
+      "__uuid__": "86bb9cd9-b162-45ad-8716-4e9a840a1e1c"
     },
-    "fileId": "61xpzxOHlPyaK3b8GXDa++",
+    "fileId": "3c+qw4RM5JfbQFKOl8erUU",
     "sync": false
   }
 ]

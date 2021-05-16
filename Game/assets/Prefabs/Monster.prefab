@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Man",
+    "_name": "Monster",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -22,7 +22,7 @@
       }
     ],
     "_active": true,
-    "_level": 2,
+    "_level": 1,
     "_components": [
       {
         "__id__": 7
@@ -63,8 +63,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 172,
-      "y": 82,
+      "x": 0,
+      "y": 0,
       "z": 0
     },
     "_scale": {
@@ -222,7 +222,7 @@
   },
   {
     "__type__": "cc.Sprite",
-    "_name": "",
+    "_name": "Monster<Sprite>",
     "_objFlags": 0,
     "node": {
       "__id__": 1
@@ -287,6 +287,10 @@
     "animator": {
       "__id__": 8
     },
+    "deadEffect": {
+      "__uuid__": "07bc0e41-f2fc-43aa-90f4-39be8939c2a4"
+    },
+    "_monsterHealth": 30,
     "_id": ""
   },
   {
@@ -335,8 +339,8 @@
     },
     "_size": {
       "__type__": "cc.Size",
-      "width": 36.9,
-      "height": 46.7
+      "width": 50,
+      "height": 50
     },
     "_id": ""
   },

@@ -17,14 +17,6 @@ cc.Class({
         return this._btnArr[key]
     },
 
-
-    onLoad () {
-    },
-
-    start () {
-        
-    },
-
     clickStart(){
         this._btnArr["startFlag"] = true;
         this._btnArr["optionFlag"] = false;

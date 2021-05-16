@@ -63,8 +63,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 311,
-      "y": -1708.202,
+      "x": -12.816,
+      "y": 1288.721,
       "z": 0
     },
     "_scale": {
@@ -355,8 +355,6 @@
     "BulletPrefabs": {
       "__uuid__": "48f0f5b1-feb1-49fb-91b7-19e0be23895b"
     },
-    "speedBullet": 300,
-    "tankSpeed": 300,
     "_id": ""
   },
   {

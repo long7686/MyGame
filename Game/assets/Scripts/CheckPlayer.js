@@ -1,4 +1,5 @@
 const Emitter = require("EventsListener")
+const EnemiesTank = require("EnemiesTank")
 cc.Class({
     extends: cc.Component,
 
@@ -7,17 +8,14 @@ cc.Class({
     },
 
     onLoad () {
-        if (this.node.parent.name === "Man"){
+        if (this.node.parent.name === "Monster"){
             this.node.parent.getComponent(cc.Animation).play("MonIdle")
         } 
     },
 
-    start () {
-
-    },
     onBeginContact(contact, selfCollider, otherCollider){ 
         if (otherCollider.tag == 1){
-            if (selfCollider.node.parent.name === "Man"){
+            if (selfCollider.node.parent.name === "Monster"){
                 this._target = otherCollider.node
                 this.flipMonster()
                 selfCollider.node.parent.getComponent(cc.Animation).play("MonRun")
@@ -27,13 +25,14 @@ cc.Class({
             else{
                 this._target = otherCollider.node
                 this.node.active = false;
+                this.node.active = true;
                 this.chasePlayer()
             }
         }
     },
 
     chasePlayer(){
-        if (this.node.parent.name === "Man"){
+        if (this.node.parent.name === "Monster"){
             cc.tween(this.node.parent)
             .to(1.5,{position: cc.v2(this._target.position)})
             .call(()=>  this.node.parent.getComponent(cc.Animation).play("MonIdle"))
@@ -41,13 +40,11 @@ cc.Class({
             .start() 
         } 
         else{
-            cc.tween(this.node.parent)
-            .to(1.5,{position: cc.v2(this._target.position)})
-            .call(()=> this.node.active = true)
-            .start() 
+            Emitter.instance.emit("playerGetIn", this._target, this._whichTank)
         }
         
     },
+
 
     flipMonster(){
         if (this._target.position.x > this.node.parent.position.x){
@@ -58,9 +55,4 @@ cc.Class({
         }
     },
 
-    update (dt) {
-        if( this.node.active){
-            
-        }
-    },
 });
