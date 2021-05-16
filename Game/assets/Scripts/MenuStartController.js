@@ -4,7 +4,6 @@ cc.Class({
 
     properties: {
         mainLayOut: cc.Layout,
-        optionLayOut: cc.Layout,
         tutorialLayOut: cc.Layout,
         backBtn: cc.Button,
         backGround: cc.Node,
@@ -25,10 +24,6 @@ cc.Class({
         if(btn["startFlag"]){   
             cc.director.loadScene("1");
         }
-        else if(btn["optionFlag"]){
-            this.backBtn.node.active = true;
-            this.optionLayOut.node.active = true;
-        }
         else if (btn["tutorialFlag"]){
             this.backBtn.node.active = true;
             this.tutorialLayOut.node.active = true;
@@ -40,15 +35,12 @@ cc.Class({
 
     clickBack(){
         this.tutorialLayOut.node.active = false;
-        this.optionLayOut.node.active = false;
         this.backBtn.node.active = false;
         this.mainLayOut.node.active = true;
     },
 
     animationTitle(){
         let dropTitle = cc.tween()
-            // .to(1,{scale:1.5},{easing: "easeOutBack"})
-            // .to(1,{scale:1},{easing: "easeInBack"})
             .to(1,{scale: 1.5})
             .to(1,{scale:1})
 

@@ -5,7 +5,7 @@ cc.Class({
     properties: {
         barrel: cc.Node,
         _enemyHealth: {
-            default: 30,
+            default: 60,
             serializable:false,
         },
         _shootCountTime:{
@@ -25,6 +25,7 @@ cc.Class({
     start () {
         Emitter.instance.registerEvent("playerGetIn", this.lookAtPlayer.bind(this))  
         this.barrel.on("rotation-changed", this.getBulletDirection.bind(this))
+        
     },
 
     lookAtPlayer(player){
@@ -33,7 +34,7 @@ cc.Class({
         let angle = Math.atan2(this._target .y, this._target.x);
         this._angleD = cc.misc.radiansToDegrees(angle) + 90
         this.barrel.angle = this._angleD;
-        if(this._shootCountTime >= 60){
+        if(this._shootCountTime >= 120){
             this.shootPlayer()
             this._shootCountTime = 0
         }
@@ -57,13 +58,17 @@ cc.Class({
                 Emitter.instance.emit("getDamge", this.node)
             }
             if (this._enemyHealth <= 0){
+                
                 this.enemyDead()
             }
+        }
+        if (otherCollider.node.group ==="Bullet"){
+            otherCollider.node.destroy()
         }
     },
 
     enemyDead(){
-        this.node.active = false
+        this.node.active = false;
         this._isDead = true
         let effect = cc.instantiate(this.deadEffect)
         this.node.parent.addChild(effect)

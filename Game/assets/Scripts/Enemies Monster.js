@@ -5,14 +5,11 @@ cc.Class ({
     properties: {
         animator: cc.Animation,
         deadEffect: cc.Prefab,
-        _monsterHealth: 30,
+        _monsterHealth: {
+            default: 30,
+            serializable:false,
+        },
     },
-
-
-    onLoad () {
-
-    },
-
     start () {
         Emitter.instance.registerEvent("getDamge", this.monsterGetDamge.bind(this))
     },
@@ -29,6 +26,9 @@ cc.Class ({
             if (this._monsterHealth <= 0){
                 this.deadMonster()
             }
+        }
+        if (otherCollider.node.group ==="Bullet"){
+            otherCollider.node.destroy()
         }
     },
 

@@ -30,10 +30,6 @@ cc.Class({
         this.node.on("rotation-changed", this.getBulletDirection.bind(this))
     },
 
-    start(){
-        
-    },
-
     getBulletDirection(){
         this.bulletPos = this.node.convertToWorldSpaceAR(this.spawnBullet.position);
         this.bulletPos = this.node.parent.convertToNodeSpaceAR(this.bulletPos);
@@ -140,6 +136,10 @@ cc.Class({
             this._Ammunition = 0
             Emitter.instance.emit("Win")
             this.node.active = false;
+        }
+
+        if (otherCollider.node.group ==="Bullet"){
+            otherCollider.node.destroy()
         }
     },
 

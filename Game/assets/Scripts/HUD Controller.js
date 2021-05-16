@@ -18,7 +18,12 @@ cc.Class({
     },
 
     HUD(health, ammo){
-        this.hudHealth.getComponent(cc.Label).string = "HEALTH: "+ health;
+        if (health> 0){
+            this.hudHealth.getComponent(cc.Label).string = "HEALTH: "+ health;
+        }
+        else{
+            this.hudHealth.getComponent(cc.Label).string = "HEALTH: 0";
+        }
         this.hudAmmo.getComponent(cc.Label).string = "AMMO x "+ ammo;
     },
 

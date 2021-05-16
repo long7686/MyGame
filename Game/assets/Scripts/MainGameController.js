@@ -22,6 +22,7 @@ cc.Class({
     },
 
     Shoot(bulletPos, bullerDirec, bulletPre, bulletLookAt){
+        this.node.getComponent(cc.AudioSource).play();
         let bullet = cc.instantiate(bulletPre)  
         let effect = cc.instantiate(this.effectHit) 
 

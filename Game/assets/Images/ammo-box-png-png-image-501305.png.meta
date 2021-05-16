@@ -1,6 +1,6 @@
 {
   "ver": "2.3.3",
-  "uuid": "8b340ec7-1747-4143-8bdb-7a5ba8162b7e",
+  "uuid": "7b353b5b-bf6f-4ea8-a8ed-c029bc661c90",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -11,8 +11,8 @@
   "subMetas": {
     "ammo-box-png-png-image-501305": {
       "ver": "1.0.4",
-      "uuid": "5a55dddf-15de-44e5-a984-b63e4701d602",
-      "rawTextureUuid": "8b340ec7-1747-4143-8bdb-7a5ba8162b7e",
+      "uuid": "f4a9309d-f83d-4114-bae9-6b24e8b931a2",
+      "rawTextureUuid": "7b353b5b-bf6f-4ea8-a8ed-c029bc661c90",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

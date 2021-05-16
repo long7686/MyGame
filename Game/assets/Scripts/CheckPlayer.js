@@ -34,7 +34,7 @@ cc.Class({
     chasePlayer(){
         if (this.node.parent.name === "Monster"){
             cc.tween(this.node.parent)
-            .to(1.5,{position: cc.v2(this._target.position)})
+            .to(1.3,{position: cc.v2(this._target.position)})
             .call(()=>  this.node.parent.getComponent(cc.Animation).play("MonIdle"))
             .call(()=> this.node.active = true)
             .start() 
