@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "bulletBeige_outline",
+    "texture": "977504b9-1ae5-4ec8-bf3e-fc255b164d25",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      20,
+      34
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      20,
+      34
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "bulletSilverSilver_outline",
+    "texture": "de6c9c49-7364-4e97-b7bd-3aa8711f8699",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      20,
+      34
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      20,
+      34
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

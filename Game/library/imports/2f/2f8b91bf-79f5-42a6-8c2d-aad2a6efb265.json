@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "barrelRed_side",
+    "texture": "765d656c-6072-4a10-b12e-80fe74def9b2",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      44,
+      62
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      44,
+      62
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

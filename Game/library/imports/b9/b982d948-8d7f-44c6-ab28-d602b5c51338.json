@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Sem-título-1_07",
+    "texture": "eb2baf86-7956-497b-8cff-c42798c34005",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      188,
+      198
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      188,
+      198
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

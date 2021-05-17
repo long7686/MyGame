@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tankGreen_outline",
+    "texture": "549d497f-8945-4fb6-8033-cece2ea3f5d7",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      83,
+      78
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      83,
+      78
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

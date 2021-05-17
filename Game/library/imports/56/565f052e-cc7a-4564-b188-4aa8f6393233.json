@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "smokeGrey5",
+    "texture": "f855eafa-bc8c-49af-b414-3a6d984d9124",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      98,
+      107
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      98,
+      107
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

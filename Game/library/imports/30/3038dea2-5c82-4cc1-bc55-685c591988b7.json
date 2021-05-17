@@ -1,0 +1,20 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "_name": "asset.plist",
+  "_objFlags": 0,
+  "_native": "",
+  "_spriteFrames": {
+    "Idle": {
+      "__uuid__": "7bac20e3-9dc0-488c-87ac-211fd5cd8921"
+    },
+    "ammo": {
+      "__uuid__": "e01534ae-a6a5-4192-bbc1-a93bdf31e7ef"
+    },
+    "imgbin_military-rank-sergeant-png": {
+      "__uuid__": "ff04dbf1-8c25-41b9-9130-ecb67e1a9753"
+    },
+    "tankRed_outline": {
+      "__uuid__": "4421438f-de25-459b-8db2-9c0fb61d60b8"
+    }
+  }
+}

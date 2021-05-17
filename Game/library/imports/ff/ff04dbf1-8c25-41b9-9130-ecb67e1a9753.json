@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "imgbin_military-rank-sergeant-png",
+    "texture": "b6f0a2ab-c0de-486f-8d8b-4aa54614c63d",
+    "atlas": "3038dea2-5c82-4cc1-bc55-685c591988b7",
+    "rect": [
+      0,
+      0,
+      396,
+      512
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      512,
+      512
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

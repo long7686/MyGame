@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "ammo-box-png-png-image-501305",
+    "texture": "7b353b5b-bf6f-4ea8-a8ed-c029bc661c90",
+    "atlas": "",
+    "rect": [
+      26,
+      0,
+      247,
+      200
+    ],
+    "offset": [
+      -0.5,
+      0
+    ],
+    "originalSize": [
+      300,
+      200
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "barrelGreen_side_damaged",
+    "texture": "b3820a0f-ab22-441d-b43a-b4346a238f96",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      44,
+      62
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      44,
+      62
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

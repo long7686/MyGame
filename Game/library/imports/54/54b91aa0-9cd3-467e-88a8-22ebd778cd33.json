@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "barrelGreen_outline",
+    "texture": "eec0e88f-07e8-45b3-9437-4d374cbcdf72",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      24,
+      58
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      24,
+      58
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

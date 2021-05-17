@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "bulletGreen",
+    "texture": "00ce32f8-a692-4194-90f1-6b75aee44ae1",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      12,
+      26
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      12,
+      26
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

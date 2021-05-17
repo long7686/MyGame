@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "bulletBeigeSilver",
+    "texture": "b21dc88c-738a-4e94-a742-77669ea34204",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      12,
+      26
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      12,
+      26
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
